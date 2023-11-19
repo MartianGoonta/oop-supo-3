@@ -42,7 +42,15 @@ public class GameLoop {
 
     public void selectPet(){
         currentPet = pets.searchPet(userInterface.selectPet());
-        interactWithPet();
+        if (currentPet != null)
+        {
+            interactWithPet();
+        }
+        else{
+            System.out.println("isnt a pet");
+            selectPet();
+        }
+
     }
 
     public void addNewPet()
