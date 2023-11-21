@@ -65,6 +65,13 @@ public class GameLoop {
                 currentPet = cat;
                 interactWithPet();
             }
+            case DOG:
+            {
+                Dog dog = new Dog(userInterface.newPetName());
+                pets.newPet(dog);
+                currentPet = dog;
+                interactWithPet();
+            }
             case INVALID_INPUT:
             {
                 System.out.println("invalid input");

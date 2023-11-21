@@ -42,13 +42,17 @@ public class TextInterface implements UserInterface{
     @Override
     public PetOptions newPetType() {
         Scanner is = new Scanner(System.in);
-        System.out.println("what type of pet would you like? 1: Cat");
+        System.out.println("what type of pet would you like? 1: Cat 2: Dog");
         int selection = is.nextInt();
         switch (selection)
         {
             case 1:
             {
                 return PetOptions.CAT;
+            }
+            case 2:
+            {
+                return PetOptions.DOG;
             }
         }
         return PetOptions.INVALID_INPUT;
